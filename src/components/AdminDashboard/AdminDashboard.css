@@ -1,0 +1,35 @@
+.admin-dashboard {
+  min-height: 100vh;
+  position: relative;
+}
+
+.admin-main {
+  position: relative;
+  z-index: 1;
+  margin-left: 250px;
+  min-height: 100vh;
+  padding-top: 72px;
+}
+
+
+@media (max-width: 768px) {
+   .admin-main {
+    margin-left: 0;
+  }
+}
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    z-index: 9;
+  }
+}
+

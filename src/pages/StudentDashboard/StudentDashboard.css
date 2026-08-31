@@ -1,0 +1,545 @@
+/* ==================================================
+   STUDENT DASHBOARD CONTENT
+   ================================================== */
+
+.student-content {
+  padding: 40px;
+}
+
+
+/* ==================================================
+   1. DASHBOARD HEADER
+   ================================================== */
+
+.student-dashboard-header {
+  margin-bottom: 30px;
+}
+
+.student-dashboard-header h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.student-dashboard-header p {
+  margin: 8px 0 0;
+
+  color: #9ca3af;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* ==================================================
+   2. STATISTICS
+   ================================================== */
+
+.student-stats-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.student-stat-card {
+  min-width: 0;
+
+  padding: 22px;
+
+  background: #111827;
+
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.student-stat-card:hover {
+  border-color: #374151;
+
+  transform: translateY(-2px);
+}
+
+.student-stat-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.student-stat-title {
+  color: #9ca3af;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.student-stat-icon {
+  font-size: 20px;
+}
+
+.student-stat-card h2 {
+  margin: 18px 0 6px;
+
+  color: #ffffff;
+
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.student-stat-card p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+
+/* ==================================================
+   3. QUICK ACTIONS
+   ================================================== */
+
+.student-quick-actions {
+  margin-top: 30px;
+
+  background: #111827;
+
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+
+/* Section Header */
+
+.student-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 20px 22px;
+
+  border-bottom: 1px solid #1f2937;
+}
+
+.student-section-header h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.student-section-header p {
+  margin: 5px 0 0;
+
+  color: #6b7280;
+
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+
+/* Grid */
+
+.student-quick-actions-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 14px;
+
+  padding: 20px 22px;
+}
+
+
+/* Card */
+
+.student-quick-action-card {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+
+  background: #0f172a;
+  color: #ffffff;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.student-quick-action-card:hover {
+  background: #151e2e;
+
+  border-color: #374151;
+
+  transform: translateY(-2px);
+}
+
+
+/* Icon */
+
+.student-quick-action-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #1e293b;
+
+  border-radius: 8px;
+
+  font-size: 18px;
+}
+
+
+/* Text */
+
+.student-quick-action-card h3 {
+  margin: 0;
+
+  color: #e5e7eb;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.student-quick-action-card p {
+  margin: 5px 0 0;
+
+  color: #6b7280;
+
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+
+/* ==================================================
+   4. RECENT ACTIVITY
+   ================================================== */
+
+.student-recent-activity {
+  margin-top: 30px;
+
+  background: #111827;
+
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+
+/* Activity List */
+
+.student-activity-list {
+  width: 100%;
+}
+
+
+/* Activity Item */
+
+.student-activity-item {
+  display: grid;
+
+  grid-template-columns: 38px minmax(0, 1fr) auto auto;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 16px 22px;
+
+  border-top: 1px solid #1f2937;
+
+  transition: background 0.2s ease;
+}
+
+.student-activity-item:hover {
+  background: #151e2e;
+}
+
+
+/* Icon */
+
+.student-activity-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #1e293b;
+
+  border-radius: 8px;
+
+  font-size: 17px;
+}
+
+
+/* Information */
+
+.student-activity-info {
+  min-width: 0;
+}
+
+.student-activity-info h3 {
+  margin: 0;
+
+  color: #e5e7eb;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.student-activity-info p {
+  margin: 4px 0 0;
+
+  color: #6b7280;
+
+  font-size: 11px;
+}
+
+
+/* Status */
+
+.student-activity-status {
+  width: fit-content;
+
+  padding: 4px 9px;
+
+  border-radius: 999px;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.student-activity-status.pending {
+  color: #fbbf24;
+
+  background: rgba(251, 191, 36, 0.1);
+}
+
+.student-activity-status.verified {
+  color: #34d399;
+
+  background: rgba(52, 211, 153, 0.1);
+}
+
+.student-activity-status.review {
+  color: #60a5fa;
+
+  background: rgba(96, 165, 250, 0.1);
+}
+
+
+/* Date */
+
+.student-activity-date {
+  color: #6b7280;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+
+/* View All */
+
+.student-view-all-button {
+  flex-shrink: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #60a5fa;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.student-view-all-button:hover {
+  color: #93c5fd;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+
+@media (max-width: 1100px) {
+
+  .student-content {
+    padding: 32px 28px;
+  }
+
+  .student-quick-actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .student-content {
+    padding: 24px 18px;
+  }
+
+
+  /* Dashboard Header */
+
+  .student-dashboard-header {
+    margin-bottom: 24px;
+  }
+
+  .student-dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .student-dashboard-header p {
+    font-size: 13px;
+  }
+
+
+  /* Statistics */
+
+  .student-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .student-stat-card {
+    padding: 18px;
+  }
+
+
+  /* Quick Actions */
+
+  .student-quick-actions {
+    margin-top: 24px;
+  }
+
+  .student-section-header {
+    padding: 18px;
+  }
+
+  .student-quick-actions-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    padding: 14px 18px 18px;
+  }
+
+  .student-quick-action-card {
+    padding: 16px;
+  }
+
+
+  /* Recent Activity */
+
+  .student-recent-activity {
+    margin-top: 24px;
+  }
+
+  .student-activity-item {
+    grid-template-columns: 38px minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 14px 18px;
+  }
+
+  .student-activity-status {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .student-activity-date {
+    grid-column: 2;
+
+    font-size: 10px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .student-content {
+    padding: 20px 14px;
+  }
+
+  .student-dashboard-header h1 {
+    font-size: 22px;
+  }
+
+  .student-dashboard-header p {
+    font-size: 12px;
+  }
+
+  .student-section-header {
+    align-items: flex-start;
+
+    padding: 16px;
+  }
+
+  .student-section-header h2 {
+    font-size: 16px;
+  }
+
+  .student-section-header p {
+    font-size: 11px;
+  }
+
+  .student-quick-actions-grid {
+    padding: 12px 14px 14px;
+  }
+
+  .student-activity-item {
+    padding: 14px;
+  }
+
+}

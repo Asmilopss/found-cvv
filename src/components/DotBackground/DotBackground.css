@@ -1,0 +1,32 @@
+.dot-background{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background-color: #0b0b14;
+
+
+    background-size: 20px 20px;
+    background-image : radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+
+}
+
+.dot-background::before{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:radial-gradient(circle at center, transparent 35%, rgba(11, 11, 20, 0.25)60%, rgba(11, 11, 20, 0.75)80%, rgba(11, 11, 20, 1)100%);
+
+    z-index: 1;
+    
+}
+
+.dot-content{
+    position: relative;
+    z-index: 2;
+} 

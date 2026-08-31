@@ -1,0 +1,285 @@
+/* ==================================================
+   CLAIM ITEM PAGE
+   ================================================== */
+
+.claim-item-page {
+  width: 100%;
+  max-width: 1100px;
+  padding: 30px 35px 50px;
+}
+
+
+/* ==================================================
+   BACK BUTTON
+   ================================================== */
+
+.claim-item-back {
+  display: inline-block;
+
+  margin-bottom: 25px;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #9ca3af;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.claim-item-back:hover {
+  color: #ffffff;
+}
+
+
+/* ==================================================
+   PAGE HEADER
+   ================================================== */
+
+.claim-item-header {
+  margin-bottom: 30px;
+}
+
+.claim-item-header h1 {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.claim-item-header p {
+  margin: 8px 0 0;
+
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* ==================================================
+   SELECTED ITEM
+   ================================================== */
+
+.claim-selected-item {
+  width: 100%;
+  max-width: 800px;
+
+  margin-bottom: 20px;
+  padding: 24px;
+
+  background: #111827;
+
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+}
+
+.claim-item-category {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: #60a5fa;
+  font-size: 12px;
+  font-weight: 500;
+
+  text-transform: capitalize;
+}
+
+.claim-selected-item h2 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+/* ==================================================
+   SELECTED ITEM DETAILS
+   ================================================== */
+
+.claim-selected-details {
+  display: flex;
+  gap: 40px;
+}
+
+.claim-selected-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.claim-selected-details span {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.claim-selected-details strong {
+  color: #e5e7eb;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* ==================================================
+   CLAIM FORM CARD
+   ================================================== */
+
+.claim-item-card {
+  width: 100%;
+  max-width: 800px;
+
+  padding: 30px;
+
+  background: #111827;
+
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+}
+
+
+/* ==================================================
+   CLAIM INFORMATION
+   ================================================== */
+
+.claim-item-info {
+  margin-bottom: 25px;
+}
+
+.claim-item-info h2 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.claim-item-info p {
+  margin: 0;
+
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* ==================================================
+   CLAIM FORM
+   ================================================== */
+
+.claim-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.claim-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.claim-form-group label {
+  color: #e5e7eb;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* ==================================================
+   TEXTAREA
+   ================================================== */
+
+.claim-form-group textarea {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  resize: vertical;
+
+  color: #ffffff;
+  background: #0f172a;
+
+  border: 1px solid #374151;
+  border-radius: 8px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+
+  transition: border-color 0.2s ease;
+}
+
+.claim-form-group textarea::placeholder {
+  color: #6b7280;
+}
+
+.claim-form-group textarea:focus {
+  border-color: #2563eb;
+}
+
+
+/* ==================================================
+   SUBMIT BUTTON
+   ================================================== */
+
+.submit-claim-button {
+  width: fit-content;
+
+  padding: 11px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+.submit-claim-button:hover {
+  background: #1d4ed8;
+}
+
+.submit-claim-button:active {
+  transform: translateY(1px);
+}
+
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 768px) {
+
+  .claim-item-page {
+    padding: 25px 20px 40px;
+  }
+
+  .claim-item-header h1 {
+    font-size: 24px;
+  }
+
+  .claim-selected-details {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .claim-item-card,
+  .claim-selected-item {
+    padding: 20px;
+  }
+}

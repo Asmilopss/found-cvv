@@ -1,0 +1,287 @@
+.my-claims-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/* ================================
+   Header
+================================ */
+
+.my-claims-header {
+  margin-bottom: 30px;
+}
+
+.my-claims-header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.my-claims-header p {
+  margin: 8px 0 0;
+  color: #9ca3af;
+  font-size: 15px;
+}
+
+/* ================================
+   Claims List
+================================ */
+
+.claims-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ================================
+   Claim Card
+================================ */
+
+.claim-card {
+  width: 100%;
+  padding: 24px;
+
+  background: rgba(17, 24, 39, 0.88);
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+  box-sizing: border-box;
+}
+
+/* ================================
+   Card Header
+================================ */
+
+.claim-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #1f2937;
+}
+
+.claim-card-header h2 {
+  margin: 0 0 7px;
+
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.claim-item-meta {
+  margin: 0;
+
+  color: #9ca3af;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+/* ================================
+   Claim Status
+================================ */
+
+.claim-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 13px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+/* Pending */
+
+.claim-status.pending {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+}
+
+/* Approved */
+
+.claim-status.approved {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+}
+
+/* Rejected */
+
+.claim-status.rejected {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+}
+
+/* ================================
+   Claim Information
+================================ */
+
+.claim-card-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+
+  padding-top: 22px;
+}
+
+.claim-info span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #6b7280;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.claim-info p {
+  margin: 0;
+
+  color: #e5e7eb;
+
+  font-size: 15px;
+  line-height: 1.5;
+
+  word-break: break-word;
+}
+
+/* ================================
+   Empty State
+================================ */
+
+.no-claims {
+  padding: 60px 20px;
+
+  text-align: center;
+
+  background: rgba(17, 24, 39, 0.88);
+
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+  box-sizing: border-box;
+}
+
+.no-claims h2 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.no-claims p {
+  margin: 0;
+
+  color: #9ca3af;
+
+  font-size: 14px;
+}
+
+/* ================================
+   Responsive
+================================ */
+
+@media (max-width: 768px) {
+  .my-claims-page {
+    padding: 25px 18px;
+  }
+
+  .my-claims-header h1 {
+    font-size: 27px;
+  }
+
+  .claim-card {
+    padding: 20px;
+  }
+
+  .claim-card-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .claim-status {
+    align-self: flex-start;
+  }
+
+  .claim-card-body {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-claims-page {
+    padding: 20px 14px;
+  }
+
+  .claim-card {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .my-claims-header h1 {
+    font-size: 24px;
+  }
+
+  .my-claims-header p {
+    font-size: 14px;
+  }
+
+  .claim-card-header h2 {
+    font-size: 19px;
+  }
+
+  .claim-info p {
+    font-size: 14px;
+  }
+}
+
+/* ================================
+   Approved Claim Message
+================================ */
+
+.claim-approved-message {
+  grid-column: 1 / -1;
+  margin-top: 4px;
+  padding: 16px 18px;
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: 10px;
+}
+
+.claim-approved-message strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #4ade80;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.claim-approved-message p {
+  margin: 0;
+  color: #d1d5db;
+  font-size: 14px;
+  line-height: 1.5;
+}

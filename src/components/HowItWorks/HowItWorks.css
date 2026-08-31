@@ -1,0 +1,696 @@
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.how-it-works {
+  position: relative;
+  width: 100%;
+  padding: 80px 0 90px;
+  overflow: hidden;
+}
+
+.how-container {
+  width: min(1250px, 90%);
+  margin: 0 auto;
+}
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.section-header {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto 10px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 12px;
+
+  color: #a970ff;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+.badge-line {
+  width: 30px;
+  height: 1px;
+
+  background: #8b4dff;
+
+  box-shadow: 0 0 8px rgba(139, 77, 255, 0.7);
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.section-header h2 {
+  margin: 0;
+
+  color: #f7f7f9;
+
+  font-size: clamp(1.7rem, 2.4vw, 2.2rem);
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.5px;
+
+  text-align: center;
+}
+
+.section-header h2 span {
+  color: #9a5cff;
+
+  text-shadow:
+    0 0 20px rgba(139, 77, 255, 0.3);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.section-header p {
+  width: 100%;
+  max-width: 580px;
+
+  margin: 11px auto 0;
+
+  color: #898798;
+
+  font-size: 12px;
+
+  line-height: 1.55;
+
+  text-align: center;
+}
+
+
+
+
+
+
+
+/* =========================================
+   PROCESS DIAGRAM
+========================================= */
+
+.process-diagram {
+  position: relative;
+
+  width: 100%;
+  max-width: 1180px;
+
+  height: 500px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   CURVED SVG
+========================================= */
+
+.process-line {
+  position: absolute;
+
+  top: 30px;
+  left: 0;
+
+  width: 100%;
+  height: 270px;
+
+  overflow: visible;
+
+  pointer-events: none;
+}
+
+.process-line-main {
+  fill: none;
+
+  stroke: #8c4cff;
+  stroke-width: 2.2;
+
+  stroke-linecap: round;
+
+  filter: url(#lineGlow);
+}
+
+.process-line-glow {
+  fill: none;
+
+  stroke: #7b3cff;
+  stroke-width: 8;
+
+  stroke-linecap: round;
+
+  opacity: 0.14;
+
+  filter: blur(7px);
+}
+
+
+/* =========================================
+   STEPS
+========================================= */
+
+.process-steps {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+.process-step {
+  position: absolute;
+
+  width: 18%;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   STEP POSITIONS
+========================================= */
+
+.step-1 {
+  left: 1%;
+  top: 145px;
+}
+
+.step-2 {
+  left: 21.5%;
+  top: 55px;
+}
+
+.step-3 {
+  left: 41%;
+  top: 175px;
+}
+
+.step-4 {
+  left: 60.5%;
+  top: 55px;
+}
+
+.step-5 {
+  right: 1%;
+  top: 145px;
+}
+
+
+/* =========================================
+   LARGE BACKGROUND NUMBERS
+========================================= */
+
+.background-number {
+  position: absolute;
+
+  top: -82px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: rgba(93, 51, 180, 0.12);
+
+  font-size: clamp(4.2rem, 6vw, 6rem);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   NODE
+========================================= */
+
+.process-node-wrapper {
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 66px;
+  height: 66px;
+
+  margin: 0 auto;
+}
+
+.process-node {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 58px;
+  height: 58px;
+
+  border: 1px solid rgba(147, 79, 255, 0.9);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(124, 61, 255, 0.16),
+      rgba(10, 9, 20, 0.96) 65%
+    );
+
+  color: #a365ff;
+
+  font-size: 26px;
+
+  box-shadow:
+    0 0 0 1px rgba(123, 61, 255, 0.1),
+    0 0 22px rgba(123, 61, 255, 0.2);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.process-node svg {
+  width: 27px;
+  height: 27px;
+}
+
+.process-node:hover {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 0 0 5px rgba(123, 61, 255, 0.08),
+    0 0 30px rgba(123, 61, 255, 0.4);
+}
+
+
+/* =========================================
+   SMALL GLOWING DOT
+========================================= */
+
+.node-dot {
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #a15cff;
+
+  box-shadow:
+    0 0 8px #914cff,
+    0 0 17px rgba(145, 76, 255, 0.8);
+
+  z-index: 3;
+}
+
+
+/* =========================================
+   DOT POSITIONS
+========================================= */
+
+.step-1 .node-dot,
+.step-5 .node-dot {
+  top: -11px;
+}
+
+.step-2 .node-dot,
+.step-4 .node-dot {
+  bottom: -11px;
+}
+
+.step-3 .node-dot {
+  top: -11px;
+}
+
+
+/* =========================================
+   VERTICAL CONNECTOR
+========================================= */
+
+.process-node-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  width: 1px;
+  height: 15px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(155, 91, 255, 0),
+    rgba(155, 91, 255, 0.8)
+  );
+}
+
+.step-1 .process-node-wrapper::before,
+.step-3 .process-node-wrapper::before,
+.step-5 .process-node-wrapper::before {
+  top: -25px;
+}
+
+.step-2 .process-node-wrapper::before,
+.step-4 .process-node-wrapper::before {
+  bottom: -25px;
+
+  transform: rotate(180deg);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.process-content {
+  width: 100%;
+
+  margin-top: 20px;
+}
+
+.process-content h3 {
+  margin: 0;
+
+  color: #f2f1f5;
+
+  font-size: 16px;
+
+  font-weight: 650;
+
+  line-height: 1.3;
+}
+
+.title-line {
+  width: 25px;
+  height: 2px;
+
+  margin: 10px auto 11px;
+
+  background: #9959ff;
+
+  box-shadow: 0 0 9px rgba(153, 89, 255, 0.5);
+}
+
+.process-content p {
+  width: 90%;
+
+  margin: 0 auto;
+
+  color: #898798;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   MOBILE PROCESS
+========================================= */
+
+.mobile-process {
+  display: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .how-it-works {
+    padding: 70px 0 80px;
+  }
+
+  .how-container {
+    width: 92%;
+  }
+
+  .process-diagram {
+    height: 480px;
+  }
+
+  .process-content h3 {
+    font-size: 15px;
+  }
+
+  .process-content p {
+    font-size: 11px;
+  }
+
+  .process-node-wrapper {
+    width: 62px;
+    height: 62px;
+  }
+
+  .process-node {
+    width: 55px;
+    height: 55px;
+  }
+
+  .process-node svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .how-it-works {
+    padding: 65px 0 80px;
+  }
+
+  .how-container {
+    width: 88%;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+
+    white-space: normal;
+  }
+
+  .section-header p {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+
+  /* Hide desktop curve */
+
+  .process-diagram {
+    display: none;
+  }
+
+
+  /* Show mobile timeline */
+
+  .mobile-process {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 38px;
+
+    padding-left: 15px;
+  }
+
+  .mobile-process::before {
+    content: "";
+
+    position: absolute;
+
+    top: 15px;
+    bottom: 15px;
+
+    left: 38px;
+
+    width: 1px;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(139, 77, 255, 0),
+      rgba(139, 77, 255, 0.7),
+      rgba(139, 77, 255, 0)
+    );
+
+    box-shadow:
+      0 0 10px rgba(139, 77, 255, 0.3);
+  }
+
+
+  /* Mobile step */
+
+  .mobile-step {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 22px;
+  }
+
+
+  /* Mobile node */
+
+  .mobile-node {
+    position: relative;
+
+    z-index: 2;
+
+    flex: 0 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 46px;
+    height: 46px;
+
+    border: 1px solid #8749e9;
+
+    border-radius: 50%;
+
+    background: #0d0c15;
+
+    color: #a365ff;
+
+    font-size: 21px;
+
+    box-shadow:
+      0 0 18px rgba(123, 61, 255, 0.2);
+  }
+
+  .mobile-node svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  /* Mobile content */
+
+  .mobile-content {
+    padding-top: 1px;
+  }
+
+  .mobile-content > span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: rgba(144, 87, 255, 0.5);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+  }
+
+  .mobile-content h3 {
+    margin: 0;
+
+    color: #f2f1f5;
+
+    font-size: 17px;
+
+    line-height: 1.3;
+  }
+
+  .mobile-content .title-line {
+    margin: 9px 0 10px;
+  }
+
+  .mobile-content p {
+    margin: 0;
+
+    color: #898798;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-header p {
+    font-size: 12px;
+  }
+
+  .mobile-step {
+    gap: 18px;
+  }
+
+  .mobile-node {
+    width: 43px;
+    height: 43px;
+  }
+
+  .mobile-process {
+    padding-left: 10px;
+  }
+
+  .mobile-process::before {
+    left: 31px;
+  }
+}

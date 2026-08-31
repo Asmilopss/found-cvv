@@ -1,0 +1,818 @@
+/* =========================================
+   CLAIMS PAGE
+========================================= */
+
+.claims-page {
+  padding: 34px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.claims-page-header {
+  margin-bottom: 28px;
+}
+
+.page-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.claims-page-header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 650;
+  letter-spacing: -0.7px;
+}
+
+.claims-page-header p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+/* =========================================
+   STAT CARDS
+========================================= */
+
+.claims-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.claim-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  min-height: 78px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  box-sizing: border-box;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.claim-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.claim-stat-card span {
+  display: block;
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 12px;
+}
+
+.claim-stat-card strong {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Stat icons */
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.stat-icon.total {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.stat-icon.pending {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+}
+
+.stat-icon.approved {
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+}
+
+.stat-icon.rejected {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+}
+
+/* =========================================
+   MAIN CLAIMS CARD
+========================================= */
+
+.claims-card {
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.claims-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 21px 23px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.claims-card-header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.claims-card-header p {
+  margin: 5px 0 0;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 12px;
+}
+
+/* =========================================
+   FILTER
+========================================= */
+
+.claims-filter select {
+  min-width: 130px;
+  padding: 9px 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.045);
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+
+.claims-filter select option {
+  background: #181818;
+  color: #ffffff;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.claims-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.claims-table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+}
+
+.claims-table th {
+  padding: 13px 22px;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  text-align: left;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+
+  background: rgba(255, 255, 255, 0.018);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.claims-table td {
+  padding: 16px 22px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 13px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.claims-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.claims-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.claims-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+/* =========================================
+   STUDENT
+========================================= */
+
+.student-cell {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.student-avatar {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.student-cell strong {
+  display: block;
+  margin-bottom: 3px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.student-cell span {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 11px;
+}
+
+/* =========================================
+   ITEM
+========================================= */
+
+.item-name {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+.claim-date {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.status-badge.pending {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.status-badge.approved {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+}
+
+.status-badge.rejected {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+/* =========================================
+   REVIEW BUTTON
+========================================= */
+/* 
+.review-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 7px 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 11px;
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.review-btn span {
+  font-size: 14px;
+  transition: transform 0.15s ease;
+}
+
+.review-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.review-btn:hover span {
+  transform: translateX(2px);
+} */
+.review-btn {
+  position: relative;
+  z-index: 9999;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 7px 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 11px;
+  cursor: pointer;
+  pointer-events: auto;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+/* =========================================
+   EMPTY / LOADING
+========================================= */
+
+.claims-empty {
+  padding: 65px 20px;
+  text-align: center;
+}
+
+.claims-empty p {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 13px;
+}
+
+.claims-empty h3 {
+  margin: 15px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.empty-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto;
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.claims-empty.error p {
+  color: #ef4444;
+}
+
+/* Loader */
+
+.claims-loader {
+  width: 22px;
+  height: 22px;
+
+  margin: 0 auto;
+
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-top-color: rgba(255, 255, 255, 0.7);
+
+  border-radius: 50%;
+
+  animation: claims-spin 0.8s linear infinite;
+}
+
+@keyframes claims-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+  .claims-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .claims-page {
+    padding: 22px 18px;
+  }
+
+  .claims-page-header h1 {
+    font-size: 25px;
+  }
+
+  .claims-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .claim-stat-card {
+    padding: 15px;
+  }
+
+  .stat-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .claim-stat-card strong {
+    font-size: 20px;
+  }
+
+  .claims-card-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .claims-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .claims-card-header {
+    flex-direction: column;
+  }
+
+  .claims-filter,
+  .claims-filter select {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   CLAIM REVIEW MODAL
+========================================= */
+
+.claim-review-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(6px);
+
+  box-sizing: border-box;
+}
+
+.claim-review-modal {
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: 26px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+
+  background: #171717;
+
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+
+  box-sizing: border-box;
+}
+
+.claim-review-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.claim-review-header h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.claim-review-close {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 21px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.claim-review-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* =========================================
+   REVIEW SECTIONS
+========================================= */
+
+.review-section {
+  margin-bottom: 22px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.review-section h3 {
+  margin: 0 0 15px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.review-grid > div {
+  padding: 13px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.review-grid span,
+.review-text > span,
+.review-current-status > span:first-child {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.review-grid strong {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 13px;
+  font-weight: 500;
+
+  word-break: break-word;
+}
+
+/* =========================================
+   CLAIM TEXT
+========================================= */
+
+.review-text {
+  margin-bottom: 15px;
+}
+
+.review-text p {
+  margin: 0;
+
+  padding: 13px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 13px;
+  line-height: 1.6;
+
+  white-space: pre-wrap;
+}
+
+/* =========================================
+   CURRENT STATUS
+========================================= */
+
+.review-current-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+  padding: 14px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.035);
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.claim-review-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.reject-claim-btn,
+.approve-claim-btn {
+  padding: 10px 16px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.15s ease,
+    background 0.15s ease;
+}
+
+.reject-claim-btn {
+  border: 1px solid rgba(239, 68, 68, 0.25);
+
+  background: rgba(239, 68, 68, 0.1);
+
+  color: #ef4444;
+}
+
+.reject-claim-btn:hover:not(:disabled) {
+  background: rgba(239, 68, 68, 0.17);
+}
+
+.approve-claim-btn {
+  border: 1px solid rgba(34, 197, 94, 0.25);
+
+  background: rgba(34, 197, 94, 0.1);
+
+  color: #22c55e;
+}
+
+.approve-claim-btn:hover:not(:disabled) {
+  background: rgba(34, 197, 94, 0.17);
+}
+
+.reject-claim-btn:disabled,
+.approve-claim-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   MODAL RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .claim-review-overlay {
+    padding: 14px;
+  }
+
+  .claim-review-modal {
+    padding: 20px;
+    max-height: 92vh;
+  }
+
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .claim-review-actions {
+    flex-direction: column-reverse;
+  }
+
+  .reject-claim-btn,
+  .approve-claim-btn {
+    width: 100%;
+  }
+}
+
+.review-item-warning {
+  color: #000;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.review-item-warning h4 {
+  color: #000;
+  margin: 0 0 6px;
+}
+
+.review-item-warning p {
+  color: #000;
+  margin: 0;
+}

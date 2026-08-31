@@ -1,0 +1,286 @@
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+  width: 100%;
+  background: #080b14;
+
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+
+/* =========================================
+   FOOTER CONTAINER
+========================================= */
+
+.footer-container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+
+  padding: 75px 0 65px;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.7fr 1fr;
+  gap: 80px;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.footer-brand {
+  max-width: 380px;
+}
+
+.footer-logo {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  color: #ffffff;
+
+  text-decoration: none;
+}
+
+.footer-logo span {
+  color: #2563eb;
+}
+
+.footer-description {
+  margin: 0;
+
+  max-width: 350px;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: #94a3b8;
+}
+
+
+/* =========================================
+   FOOTER HEADINGS
+========================================= */
+
+.footer-links h3,
+.footer-action h3 {
+  margin: 0 0 20px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   QUICK LINKS
+========================================= */
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-links button,
+.footer-links a {
+  padding: 0;
+  margin-bottom: 12px;
+
+  border: none;
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  color: #94a3b8;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: color 0.25s ease;
+}
+
+.footer-links button:hover,
+.footer-links a:hover {
+  color: #3b82f6;
+}
+
+
+/* =========================================
+   FOOTER ACTION
+========================================= */
+
+.footer-action {
+  max-width: 320px;
+}
+
+.footer-action p {
+  margin: 0 0 22px;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: #94a3b8;
+}
+
+
+/* =========================================
+   FOOTER BUTTON
+========================================= */
+
+.footer-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 22px;
+
+  border-radius: 8px;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #2563eb,
+    #06b6d4
+  );
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.footer-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+
+  padding: 20px 0;
+
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  font-size: 12px;
+
+  color: #64748b;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 55px;
+  }
+
+  .footer-brand {
+    max-width: 420px;
+  }
+
+  .footer-action {
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .footer-container {
+    width: 90%;
+
+    padding: 55px 0 45px;
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+  }
+
+  .footer-logo {
+    font-size: 23px;
+  }
+
+  .footer-description {
+    max-width: 100%;
+
+    font-size: 13px;
+  }
+
+  .footer-links h3,
+  .footer-action h3 {
+    margin-bottom: 16px;
+  }
+
+  .footer-links button,
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .footer-action {
+    max-width: 100%;
+  }
+
+  .footer-action p {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    width: 90%;
+
+    padding: 18px 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 7px;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,20 @@
+.student-layout {
+  min-height: 100vh;
+}
+
+.student-main {
+  margin-left: 250px;
+  min-height: 100vh;
+}
+
+/* Space for fixed topbar */
+.student-page-content {
+  padding-top: 72px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .student-main {
+    margin-left: 0;
+  }
+}

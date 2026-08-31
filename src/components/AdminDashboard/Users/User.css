@@ -1,0 +1,353 @@
+/* =========================
+   USERS PAGE
+========================= */
+
+.users-section {
+  width: 100%;
+  padding: 30px;
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.users-page-header {
+  margin-bottom: 28px;
+}
+
+.users-page-header .page-label {
+  display: inline-block;
+  margin-bottom: 8px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.users-page-header h1 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+
+  color: #ffffff;
+}
+
+.users-page-header p {
+  margin: 7px 0 0;
+
+  font-size: 14px;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================
+   USER STATISTICS
+========================= */
+
+.users-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  margin-bottom: 28px;
+}
+
+.user-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+
+  background: rgba(20, 20, 20, 0.65);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.user-stat-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 18px;
+}
+
+.user-stat-card span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.user-stat-card strong {
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   USERS CARD
+========================= */
+
+.users-card {
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+
+  background: rgba(20, 20, 20, 0.65);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.users-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 22px 24px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.users-card-header h2 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 650;
+
+  color: #ffffff;
+}
+
+.users-card-header p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.users-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  min-width: 650px;
+
+  border-collapse: collapse;
+
+  background: transparent;
+}
+
+
+/* TABLE HEADER */
+
+.users-table th {
+  padding: 13px 24px;
+
+  text-align: left;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* TABLE CELLS */
+
+.users-table td {
+  padding: 17px 24px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+
+  font-size: 14px;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.users-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* ROW HOVER */
+
+.users-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.users-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+
+/* =========================
+   USER CELL
+========================= */
+
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.user-email {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================
+   ROLE BADGE
+========================= */
+
+.user-role-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+
+
+/* STUDENT */
+
+.user-role-badge.student {
+  background: rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* ADMIN */
+
+.user-role-badge.admin {
+  background: rgba(255, 255, 255, 0.14);
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   MESSAGES
+========================= */
+
+.users-message {
+  padding: 45px 20px;
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+  .users-section {
+    padding: 24px 20px;
+  }
+
+  .users-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .users-page-header h1 {
+    font-size: 26px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .users-section {
+    padding: 20px 16px;
+  }
+
+  .users-card-header {
+    padding: 18px;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
