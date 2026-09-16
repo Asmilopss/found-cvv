@@ -129,11 +129,9 @@ function Register() {
           {/* Card */}
           <div className="auth-card">
             <h1 className="auth-title">Create an account ✨</h1>
-
             <p className="auth-subtitle">
               Join Found@CVV and help reunite lost items with their owners
             </p>
-
             <form className="auth-form" onSubmit={handleRegister}>
               {/* Name */}
               <div className="auth-field">
@@ -192,12 +190,10 @@ function Register() {
                 {loading ? "Creating account..." : "Create account"}
               </button>
             </form>
-
             {/* Divider */}
             <div className="auth-divider">
               <span>OR</span>
             </div>
-
             {/* Google */}
             <button
               type="button"
@@ -207,11 +203,16 @@ function Register() {
             >
               Continue with Google
             </button>
-
+          
             {/* Login Link */}
             <p className="auth-switch">
               Already have an account? <Link to="/login">Login</Link>
             </p>
+            {/* Back to Home */}
+            <div className="auth-back-home">
+              <Link to="/">← Back to Home</Link>
+            </div>
+          
           </div>
         </div>
       </div>
