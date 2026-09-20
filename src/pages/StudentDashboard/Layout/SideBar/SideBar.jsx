@@ -4,7 +4,7 @@ import { signOut } from "firebase/auth";
 
 import { auth } from "../../../../firebase/firebase";
 
-import "./Sidebar.css";
+import "./SideBar.css";
 
 function Sidebar({ isOpen }) {
 
