@@ -16,7 +16,7 @@ import MyClaims from "./pages/StudentDashboard/MyClaims.jsx";
 import ClaimItem from "./pages/StudentDashboard/ClaimItem.jsx";
 
 import AdminDashboard from "./components/AdminDashboard/AdminDashboard.jsx";
-import Claims from "./components/AdminDashboard/claims/claims.jsx";
+import Claims from "./components/AdminDashboard/Claims/Claims.jsx";
 import User from "./components/AdminDashboard/Users/User.jsx";
 
 import { AuthProvider } from "./context/AuthContext.jsx";
