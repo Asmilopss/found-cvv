@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 import Sidebar from "./Sidebar/Sidebar";
-import Topbar from "./Topbar/Topbar";
+
+import Topbar from "./TopBar/TopBar";
 
 import DotBackground from "../../../components/DotBackground/DotBackground";
 import "./StudentLayout.css";
