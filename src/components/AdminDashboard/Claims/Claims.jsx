@@ -15,7 +15,7 @@ import Sidebar from "../Layout/Sidebar/Sidebar";
 import Topbar from "../Layout/Topbar/Topbar";
 import DotBackground from "../../DotBackground/DotBackground";
 
-import "./claims.css";
+import "./Claims.css";
 
 function Claims() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
