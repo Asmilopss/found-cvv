@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Sidebar from "./Sidebar/Sidebar";
+import Sidebar from "./SideBar/SideBar";
 
 import Topbar from "./TopBar/TopBar";
 
