@@ -1,6 +1,6 @@
 import { useAuth } from "../../../../context/AuthContext";
 
-import "./Topbar.css";
+import "./TopBar.css";
 
 function Topbar({ onMenuClick, title }) {
   const { currentUser } = useAuth();
