@@ -57,7 +57,7 @@ function Register() {
       });
 
       // Send verification email
-      // Send verification email
+
       console.log("========== VERIFICATION DEBUG ==========");
       console.log("UID:", userCredential.user.uid);
       console.log("Email:", userCredential.user.email);
@@ -70,7 +70,7 @@ function Register() {
         console.log("Email verified AFTER:", userCredential.user.emailVerified);
 
         setSuccess(
-          "Account created successfully. Please check your email and verify your account before logging in.",
+          `A verification email has been sent to ${userCredential.user.email}. Please check your inbox or Spam/Junk folder.`,
         );
       } catch (verificationError) {
         console.error("VERIFICATION EMAIL ERROR:", verificationError);
@@ -79,9 +79,6 @@ function Register() {
 
         throw verificationError;
       }
-
-      // Sign out until email is verified
-      await auth.signOut();
 
       // Sign out until email is verified
       await auth.signOut();
