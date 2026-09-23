@@ -1,8 +1,18 @@
 
 import { useEffect, useState } from "react";
+import { useAuth } from "../../context/AuthContext";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { doc, getDoc } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  serverTimestamp,
+  where,
+} from "firebase/firestore";
 import { db } from "../../firebase/firebase";
 
 import StudentLayout from "./Layout/StudentLayout";
@@ -12,11 +22,14 @@ import "./ItemDetails.css";
 function ItemDetails() {
   const navigate = useNavigate();
   const { itemId } = useParams();
+  const { currentUser } = useAuth();
+
+  const [item, setItem] = useState(null);
+  const [responseSent, setResponseSent] = useState(false);
+  const [isSending, setIsSending] = useState(false);
 
   console.log("ItemDetails component loaded");
   console.log("Item ID:", itemId);
-
-  const [item, setItem] = useState(null);
 
   useEffect(() => {
     const fetchItem = async () => {
@@ -25,10 +38,35 @@ function ItemDetails() {
         const itemSnap = await getDoc(itemRef);
 
         if (itemSnap.exists()) {
-          setItem({
+          const itemData = {
             id: itemSnap.id,
             ...itemSnap.data(),
-          });
+          };
+
+          setItem(itemData);
+
+          // Check if the current student already responded to this item
+          if (currentUser?.uid && itemData.type === "lost") {
+            const responseQuery = query(
+              collection(db, "notifications"),
+              where("senderId", "==", currentUser.uid),
+              where("itemId", "==", itemSnap.id),
+              where("type", "==", "found_response")
+            );
+
+            const responseSnapshot = await getDocs(responseQuery);
+
+            console.log(
+              "Previous responses found:",
+              responseSnapshot.size
+            );
+
+            if (!responseSnapshot.empty) {
+              setResponseSent(true);
+            } else {
+              setResponseSent(false);
+            }
+          }
         } else {
           console.log("Item not found");
         }
@@ -38,7 +76,7 @@ function ItemDetails() {
     };
 
     fetchItem();
-  }, [itemId]);
+  }, [itemId, currentUser]);
 
   if (!item) {
     return (
@@ -52,6 +90,51 @@ function ItemDetails() {
 
   // Check whether this is a found or lost item
   const isFoundItem = item.type === "found";
+  const isOwnItem = item.reportedBy === currentUser?.uid;
+
+  const handleFoundItem = async () => {
+    if (responseSent || isSending) {
+      console.log("Response already sent for this item");
+      return;
+    }
+
+    try {
+      setIsSending(true);
+
+      // Check Firestore again before creating a notification
+      const responseQuery = query(
+        collection(db, "notifications"),
+        where("senderId", "==", currentUser.uid),
+        where("itemId", "==", item.id),
+        where("type", "==", "found_response")
+      );
+
+      const responseSnapshot = await getDocs(responseQuery);
+
+      if (!responseSnapshot.empty) {
+        console.log("Response already exists in Firestore");
+        setResponseSent(true);
+        return;
+      }
+
+      await addDoc(collection(db, "notifications"), {
+        type: "found_response",
+        senderId: currentUser.uid,
+        recipientId: item.reportedBy,
+        itemId: item.id,
+        read: false,
+        createdAt: serverTimestamp(),
+      });
+
+      setResponseSent(true);
+
+      console.log("Found item notification created successfully");
+    } catch (error) {
+      console.error("Error creating notification:", error);
+    } finally {
+      setIsSending(false);
+    }
+  };
 
   return (
     <StudentLayout title="Item Details">
@@ -139,14 +222,28 @@ function ItemDetails() {
               </div>
             )}
 
-            {/* Action - Found Items Only */}
-            {isFoundItem && (
+            {/* Action */}
+            {isFoundItem ? (
               <button
                 className="claim-item-button"
                 onClick={() => navigate(`/claim-item/${item.id}`)}
               >
                 I Think This Is Mine
               </button>
+            ) : (
+              !isOwnItem && (
+                <button
+                  className="claim-item-button"
+                  onClick={handleFoundItem}
+                  disabled={responseSent || isSending}
+                >
+                  {responseSent
+                    ? "Response Sent"
+                    : isSending
+                    ? "Sending..."
+                    : "I Found This Item"}
+                </button>
+              )
             )}
           </div>
         </div>
